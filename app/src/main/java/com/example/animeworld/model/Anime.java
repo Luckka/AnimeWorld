@@ -4,7 +4,6 @@ package com.example.animeworld.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import androidx.annotation.NonNull;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.library.baseAdapters.BR;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 
 
 @Generated("jsonschema2pojo")
-public class Datum extends  BaseObservable implements Parcelable {
+public class Anime extends  BaseObservable implements Parcelable {
 
     @SerializedName("mal_id")
     @Expose
@@ -470,7 +469,7 @@ public class Datum extends  BaseObservable implements Parcelable {
 
     }
 
-    public Datum() {
+    public Anime() {
     }
 
 
@@ -566,16 +565,16 @@ class Data {
 
     @SerializedName("data")
     @Expose
-    private List<Datum> data;
+    private List<Anime> data;
     @SerializedName("pagination")
     @Expose
     private Pagination pagination;
 
-    public List<Datum> getData() {
+    public List<Anime> getData() {
         return data;
     }
 
-    public void setData(List<Datum> data) {
+    public void setData(List<Anime> data) {
         this.data = data;
     }
 
