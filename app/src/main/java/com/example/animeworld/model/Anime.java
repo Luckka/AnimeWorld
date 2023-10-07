@@ -4,23 +4,19 @@ package com.example.animeworld.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.library.baseAdapters.BR;
-
-
 import java.util.List;
 import javax.annotation.Generated;
-
-
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
 
 @Generated("jsonschema2pojo")
-public class Anime extends  BaseObservable implements Parcelable {
+public class Anime extends BaseObservable implements Parcelable {
 
     @SerializedName("mal_id")
     @Expose
@@ -149,6 +145,9 @@ public class Anime extends  BaseObservable implements Parcelable {
     public void setUrl(String url) {
         this.url = url;
     }
+
+
+
 
     @Bindable
     public Images getImages() {
@@ -471,6 +470,58 @@ public class Anime extends  BaseObservable implements Parcelable {
 
     public Anime() {
     }
+
+    public Anime(Parcel in ) {
+        this.malId = ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.url = ((String) in.readValue((Integer.class.getClassLoader())));
+        this.images = ((Images) in.readValue((Integer.class.getClassLoader())));
+        this.trailer = ((Trailer) in.readValue((Integer.class.getClassLoader())));
+        this.approved = ((Boolean) in.readValue((Integer.class.getClassLoader())));
+        this.titles = ((List<Object>) in.readValue((Integer.class.getClassLoader())));
+        this.title = ((String) in.readValue((Integer.class.getClassLoader())));
+        this.titleEnglish = ((String) in.readValue((Integer.class.getClassLoader())));
+        this.titleJapanese = ((String) in.readValue((Integer.class.getClassLoader())));
+        this.titleSynonyms = ((List<Object>) in.readValue((Integer.class.getClassLoader())));
+        this.type =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.source =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.episodes =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.status =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.airing =  ((Boolean) in.readValue((Integer.class.getClassLoader())));
+        this.aired =  ((Aired) in.readValue((Integer.class.getClassLoader())));
+        this.duration =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.rating =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.score =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.scoredBy =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.rank =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.popularity =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.members =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.favorites =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.synopsis =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.background =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.season =  ((String) in.readValue((Integer.class.getClassLoader())));
+        this.year =  ((Integer) in.readValue((Integer.class.getClassLoader())));
+        this.broadcast =  ((Broadcast) in.readValue((Integer.class.getClassLoader())));
+        this.producers =  ((List<Producer>) in.readValue((Integer.class.getClassLoader())));
+        this.licensors =  ((List<Licensor>) in.readValue((Integer.class.getClassLoader())));
+        this.studios = ((List<Studio>) in.readValue((Integer.class.getClassLoader())));
+        this.genres = ((List<Genre>) in.readValue((Integer.class.getClassLoader())));
+        this.explicitGenres = ((List<Object>) in.readValue((Integer.class.getClassLoader())));
+        this.themes = ((List<Object>) in.readValue((Integer.class.getClassLoader())));
+        this.demographics = ((List<Object>) in.readValue((Integer.class.getClassLoader())));
+    }
+
+    public final static Parcelable.Creator<Anime> CREATOR = new Creator<Anime>() {
+        @Override
+        public Anime createFromParcel(Parcel source) {
+
+            return new Anime(source);
+        }
+
+        @Override
+        public Anime[] newArray(int size) {
+            return (new Anime[size]);
+        }
+    };
 
 
 }
