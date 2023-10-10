@@ -612,32 +612,7 @@ class Broadcast {
 
 }
 
-class Data {
 
-    @SerializedName("data")
-    @Expose
-    private List<Anime> data;
-    @SerializedName("pagination")
-    @Expose
-    private Pagination pagination;
-
-    public List<Anime> getData() {
-        return data;
-    }
-
-    public void setData(List<Anime> data) {
-        this.data = data;
-    }
-
-    public Pagination getPagination() {
-        return pagination;
-    }
-
-    public void setPagination(Pagination pagination) {
-        this.pagination = pagination;
-    }
-
-}
 class Demographic {
 
     @SerializedName("mal_id")
