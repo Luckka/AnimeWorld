@@ -2,8 +2,15 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind = "http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <data>
+        <variable
+            name="anime"
+            type="com.example.animeworld.model.Anime" />
+    </data>
 
 
     <LinearLayout
@@ -25,12 +32,14 @@
                 android:layout_height="match_parent">
                 
                 <ImageView
+                    bind:imageUrl="@{anime.images.jpg.imageUrl}"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:id="@+id/ivAnime"
                     android:scaleType="fitXY"/>
                 
                 <TextView
+                    android:text="@{anime.title}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/ivAnime"
@@ -42,6 +51,7 @@
                     android:id="@+id/tvAnime"/>
 
                 <TextView
+                    android:text="@{anime.score}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvAnime"

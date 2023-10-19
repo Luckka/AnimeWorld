@@ -3,13 +3,17 @@ package com.example.animeworld.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.ImageView;
 
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
+import androidx.databinding.BindingAdapter;
 import androidx.databinding.library.baseAdapters.BR;
 import java.util.List;
 import javax.annotation.Generated;
+
+import com.bumptech.glide.Glide;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -830,6 +834,13 @@ class Jpg {
     @SerializedName("image_url")
     @Expose
     private String imageUrl;
+
+    @BindingAdapter({"imageUrl"})
+    public static void loadImage(ImageView imageView , String imageUrl){
+        String imagePath = "https://myanimelist.net/anime/5114/"+imageUrl;
+
+        Glide.with(imageView.getContext()).load(imagePath).into(imageView);
+    }
     @SerializedName("small_image_url")
     @Expose
     private String smallImageUrl;
